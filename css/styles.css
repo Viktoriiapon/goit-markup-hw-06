@@ -28,10 +28,10 @@ img{
 
 /**========HEADER=========*/ 
 .header{
-    display: flex;
+    /*display: flex;*/
   border-bottom: 1px solid #e7e9fc;
   background-color: #ffffff;
- align-items: center;
+ /*align-items: center;*/
  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08); 
 }  
 .header .container{
@@ -53,8 +53,8 @@ img{
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    padding: 26px 0; 
-    margin-right: 76px;
+    padding: 16px 0; 
+    margin-right: 149px;
 }
 .span-accent{
     color: #2E2F42;
@@ -66,7 +66,7 @@ a{
     text-decoration: none;
 }
 .header-menu{
-    display: flex;
+    display: none;
     gap: 40px;  
     margin: 0;
     position: relative;
@@ -107,7 +107,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     font-style: normal;
 }
 .address-menu{
-    display: flex;
+    display: none;
     gap: 40px;
     margin: 0; 
 }
@@ -126,6 +126,25 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     .address-item a:hover,
     .address-item a:focus{
    color: #404BBF;
+}
+.mob-menu{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    padding: 16px 24px 24px 40px;
+    
+}
+.mob-menu .modal-btn{
+    margin-bottom: 24px;
+}
+.header-mob-open{
+    background-color: transparent;
+    border: none;
+    padding: 0;
 }
 
     /**==============================*/
@@ -957,6 +976,22 @@ text-align: center;
     
     }
     @media screen and (min-width: 1158px) {
+
+        .header-menu{
+            display: flex;
+            gap: 40px;  
+            margin: 0;
+            position: relative;}
+
+            .address-menu{
+                display: flex;
+                gap: 40px;
+                margin: 0; 
+            }
+
+        .header-navigation{
+            display: flex;
+            align-items: center;}
         
         .hero{
             margin:0 auto;
