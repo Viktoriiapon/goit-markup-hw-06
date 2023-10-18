@@ -326,6 +326,7 @@ background-color: #404BBF;
    .studies {
     padding-top: 96px;
     padding-bottom: 96px;
+    margin: 0 auto;
    }
 
 .visually-hidden {
@@ -387,6 +388,7 @@ letter-spacing: 0.02em;
 .team {
     padding: 96px 0;
     background-color: #f4f4fD;
+    margin: 0 auto;
 }
 
 .team-list {
@@ -484,6 +486,7 @@ margin-bottom: 8px;
 
 .portfolio {
     padding: 96px 0;
+    margin: 0 auto;
 }
 
 .container .portfolio{
@@ -586,6 +589,7 @@ padding: 32px 16px;
     color: #4d5ae5;
     background-color:#2E2F42;
    padding: 98px 16px 96px;
+   margin: 0 auto;
 }
 
 .container .footer-container{
