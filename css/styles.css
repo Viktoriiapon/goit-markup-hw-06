@@ -486,7 +486,6 @@ margin-bottom: 8px;
 
 .portfolio {
     padding: 96px 0;
-    margin: 0 auto;
 }
 
 .container .portfolio{
@@ -589,7 +588,7 @@ padding: 32px 16px;
     color: #4d5ae5;
     background-color:#2E2F42;
    padding: 98px 16px 96px;
-   margin: 0 auto;
+  
 }
 
 .container .footer-container{
@@ -1113,12 +1112,27 @@ text-align: center;
         padding: 96px 164px 96px 108px;    
     }
 
-    .container .footer-container{ 
-       max-width: 768px;      
+    .container.footer-container{ 
+        padding-left: 0;
+        padding-right: 0;
+
 }
 
 .footer-logo {
    justify-content: flex-start;
+}
+
+
+
+.footer-form{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+
+}
+
+.footer-note{
+    min-width: 264px; 
 }
 
     .footer-tab-up{
@@ -1250,12 +1264,6 @@ margin: 0 auto;
                padding: 0;
             }
 
-            .team-title{
-                font-size: 36px;
-                font-weight: 700;
-                line-height: 1.11;
-            }
-
             .team-subtitle {
                 font-size: 20px;
             font-weight: 500;
@@ -1275,8 +1283,10 @@ margin: 0 auto;
                     padding: 100px 0; 
                  }
 
-                 .container .footer-container{
+                 .container.footer-container{
                     min-width: 1158px;
+                    padding-left: 16px;
+                    padding-right: 16px;
                   }
 
                   .footer-container{
@@ -1296,6 +1306,12 @@ margin: 0 auto;
 
                 .footer-note{
                     margin-right: 120px;
+                }
+                .footer-form{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 24px;
+            
                 }
 
                 .footer-tab-up{
