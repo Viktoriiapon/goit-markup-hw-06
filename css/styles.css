@@ -29,6 +29,8 @@ img{
 
 /**========HEADER=========*/ 
 .header{
+    padding-top: 16px;
+    padding-bottom: 16px;
     margin: 0 auto;
   border-bottom: 1px solid #e7e9fc;
   background-color: #ffffff;
@@ -54,7 +56,6 @@ img{
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    padding: 16px 0; 
     margin-right: 149px;
 }
 
@@ -83,7 +84,6 @@ color: #2E2F42;
 font-weight: 500;
 line-height: 1.5;
 letter-spacing: 0.02em;
-padding: 24px 0;
 transition-property: color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -158,10 +158,12 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     padding: 24px 24px 40px 16px;
     display: flex;
     flex-direction: column;
+    
     justify-content: space-between;
     opacity: 1;
     visibility: hidden;
-    pointer-events: auto;   
+    pointer-events: auto;  
+    margin: 0 auto; 
 }
 
 .modal-mob-btn{
@@ -186,12 +188,14 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-mob-menu{
-    display: block;
+    display: flex;
+    flex-direction: column;
    gap: 40px;
    margin-bottom: 168px;
 }
 
 .header-mob-item a{
+   
     color: #2E2F42;
 font-size: 36px;
 font-weight: 700;
@@ -204,7 +208,7 @@ letter-spacing: 0.02em;
 }
 
 .header-mob-item:not(:last-child){
-    margin-bottom: 24px;
+    margin-bottom: 40px;
 }
 
 .address-mob-item a{
@@ -223,13 +227,20 @@ letter-spacing: 0.02em;
         flex-direction: column;
     gap: 24px;
       margin-bottom: 48px;
+      padding: 0;
     }
 
     .mob-soc-list{
         display: flex;
         gap: 24px;
-        align-items: center;
-        justify-content: center;
+        align-items: baseline;
+        justify-content: space-between;
+      
+    }
+
+    .mob-soc-list:last-child{
+        margin: 0;
+
     }
 
     .mob-soc-item{
@@ -306,9 +317,11 @@ line-height: 1.5;
 letter-spacing: 0.04em;
 cursor: pointer;
 display: block;
+text-align: center;
+padding: 16px 32px;
 margin: 0 auto;
-max-width: 169px;
-height: 56px;
+min-width: 169px;
+min-height: 56px;
 border: none;
 border-radius: 4px;
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -373,6 +386,7 @@ font-weight: 700;
 line-height: 1.11;
 letter-spacing: 0.02em;
 text-align: center;
+margin-bottom: 8px;
 }
 
 .studies-text {
@@ -406,9 +420,9 @@ letter-spacing: 0.02em;
 
 .team-title{
 color: #2e2f42;
-font-size: 20px;
-font-weight: 500;
-line-height: 1.2;
+font-size: 36px;
+font-weight: 700;
+line-height: 1.11;
 letter-spacing: 0.02em;
 text-align: center;
 text-transform: capitalize;
@@ -468,7 +482,7 @@ margin-bottom: 72px;
 .team-subtitle {
 font-size: 20px;
 font-weight: 500;
-line-height: 1.2;
+line-height: 1.5;
 letter-spacing: 0.02em;
 text-align: center;
 margin-bottom: 8px;
@@ -591,8 +605,6 @@ padding: 32px 16px;
     color: #4d5ae5;
     background-color:#2E2F42;
    padding: 98px 16px 96px;
-   margin: 0 auto;
-  
 }
 
 .container .footer-container{
@@ -619,6 +631,11 @@ margin-bottom: 18px;
 .span-footer-logo{
 color:#F4F4FD;
 }
+.footer-soc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .footer-note{
     min-width: 288px; 
@@ -627,8 +644,8 @@ color:#F4F4FD;
 .footer-tab-up{
     display: flex;
 flex-direction: column;
-justify-content: center;
-align-items: center;
+justify-content: space-between;
+/*align-items: center;*/
     gap: 72px;
     margin-bottom: 72px;
 }
@@ -644,12 +661,13 @@ max-width: 264px;
 .soc-list{
     display: flex;
     gap: 16px;
-    align-items: center;
-    justify-content: center; 
+    /*align-items: center;
+    justify-content: center;*/ 
   margin: 0;
 }
 
 .soc-title{
+    align-items: center;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -683,19 +701,29 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: #31d0aa;
 }
 
-.form-container{
+/*.form-container{
    display: flex;
    flex-direction: column;
-  align-items: center;
-}
+   align-items: center;
+}*/
+/*.footer-soc{
+    align-items: center;
+}*/
 
-.form-left{
+/*.form-left{
     display: flex;
     flex-direction: column;
    align-items: center;
+}*/
+.footer-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-subscribe{
+    display: flex;
+    justify-content: center;
     margin-bottom: 16px;
     color: var(--WHITE, #FFF);
 font-size: 16px;
@@ -1001,6 +1029,10 @@ text-align: center;
     .container{
         max-width: 768px;   
        }
+       .header{
+        padding-top: 16px;
+        padding-bottom: 16px;
+       }
 
        .header-menu{
         display: flex;
@@ -1009,10 +1041,11 @@ text-align: center;
         position: relative;}
 
         .header-item:first-child a::after{
-    bottom: -5px; 
+    bottom: -35px; 
 }
 
         .logo{
+            padding: 0;
             margin-right: 120px;
         }
 
@@ -1025,15 +1058,17 @@ text-align: center;
         }
 
         .address-menu{
-            display: block;
-            align-items: last baseline;
+            display: flex;
+            flex-direction: column;
+            /*align-items: last baseline;*/
             gap: 12px;
             margin: 0; 
-            padding-top: 16px;
+            padding: 0;
+            /*padding-top: 16px;
             padding-right: 16px;
-            padding-bottom: 16px; 
+            padding-bottom: 16px; */
         }
-
+        
         .address-item a{
             padding: 0;
         }
@@ -1072,17 +1107,13 @@ text-align: center;
         font-size: 56px;
         line-height: 1.07;
     }
-
+.studies-subtitle{
+    text-align: start;
+}
        .studies-list {
        flex-wrap: wrap;
        flex-direction: row;
        gap: 72px 24px;
-        }
-
-        .studies-list {
-            flex-wrap: wrap;
-            flex-direction: row;
-            gap: 72px 24px;
         }
 
     .studies-item {
@@ -1097,6 +1128,9 @@ text-align: center;
        padding: 0;
     }
 
+    .team-subtitle{
+        line-height: 1.2;
+    }
     .portfolio-list{
         flex-wrap: wrap;
         flex-direction: row;
@@ -1180,6 +1214,10 @@ padding-right: 15px;
 padding-left: 15px; 
 margin: 0 auto;
            }
+           .header{
+            padding-top: 24px;
+            padding-bottom: 24px;
+           }
 
         .header-menu{
             display: flex;
@@ -1189,7 +1227,7 @@ margin: 0 auto;
         }
 
         .header-item:first-child a::after{
-            bottom: -1px; 
+            bottom: -24px; 
         }
 
             .logo{
@@ -1199,13 +1237,10 @@ margin: 0 auto;
             .mob-menu{
                 display: none;
             }
-            .address{
-                padding-top: 24px;
-                padding-bottom: 24px;
-            }
     
             .address-menu{
                 display: flex;
+                flex-direction: row;
                 gap: 40px;
                 padding-top: 0;
                 padding-bottom: 0;
@@ -1231,6 +1266,7 @@ margin: 0 auto;
       url(../images/people-office-2x.jpg);
   }
 }
+
         .hero-title{
             max-width: 496px;
             margin-bottom: 48px;  
@@ -1273,13 +1309,6 @@ margin: 0 auto;
                padding: 0;
             }
 
-            .team-subtitle {
-                font-size: 20px;
-            font-weight: 500;
-                line-height: 1.2;
-                letter-spacing: 0.02em;
-            }
-
             .container .portfolio{
                 padding: 32px 16px;
                 }
@@ -1308,9 +1337,9 @@ margin: 0 auto;
                     margin-bottom: 16px;
                  }
             
-                 .soc-list{ 
+                .footer-soc{
                     margin-right: 80px;
-                    margin-bottom: 0;
+                   
                 }
 
                 .footer-note{
